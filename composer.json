@@ -1,0 +1,23 @@
+{
+    "name": "mobile-backend/php-sdk",
+    "homepage": "https://github.com/ienaga/MobileBackend2",
+    "description": "MobileBackend php-sdk",
+    "keywords": ["mobilebackend"],
+    "type": "library",
+    "license": "MIT",
+    "authors":[
+        { 
+            "name": "Toshiyuki Ienaga", 
+            "email": "ienaga@tvon.jp" 
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": { 
+            "MobileBackend\\": "" 
+        }
+    },
+    "target-dir": "MobileBackend"
+}
