@@ -2,6 +2,10 @@ MobileBackend php-sdk
 =======
 
 
+[![Latest Stable Version](https://poser.pugx.org/mobile-backend/php-sdk/v/stable)](https://packagist.org/packages/mobile-backend/php-sdk) [![Total Downloads](https://poser.pugx.org/mobile-backend/php-sdk/downloads)](https://packagist.org/packages/mobile-backend/php-sdk) [![Latest Unstable Version](https://poser.pugx.org/mobile-backend/php-sdk/v/unstable)](https://packagist.org/packages/mobile-backend/php-sdk) [![License](https://poser.pugx.org/mobile-backend/php-sdk/license)](https://packagist.org/packages/mobile-backend/php-sdk)
+
+
+
 # Doc
 
 http://mb.cloud.nifty.com/doc/current/rest/common/format.html
