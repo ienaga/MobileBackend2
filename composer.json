@@ -15,9 +15,9 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": { 
-            "MobileBackend\\": "" 
+        "psr-0": {
+            "MobileBackend\\PhpSdk\\": ""
         }
     },
-    "target-dir": "MobileBackend"
+    "target-dir": "MobileBackend/PhpSdk"
 }
