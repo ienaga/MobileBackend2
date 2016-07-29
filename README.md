@@ -38,7 +38,7 @@ $config = [
 ## GET
 
 ```php
-$mobileBackend = new MobileBackend($config);
+$mobileBackend = new \MobileBackend\PhpSdk\MobileBackend($config);
 $json = $mobileBackend
     ->setMethod("GET")
     ->addQuery("target", [$os])
@@ -53,11 +53,11 @@ $json = $mobileBackend
 $message = "A Happy New Year!!";
 
 // send time
-$dateTime = new DateTime("2016-01-01 00:00:00");
-$dateTime->setTimeZone(new DateTimeZone("UTC"));
+$dateTime = new \DateTime("2016-01-01 00:00:00");
+$dateTime->setTimeZone(new \DateTimeZone("UTC"));
 $deliveryTime = $dateTime->format("Y-m-d\TH:i:s.\0\0\0\Z");
 
-$mobileBackend = new MobileBackend($config);
+$mobileBackend = new \MobileBackend\PhpSdk\MobileBackend($config);
 $mobileBackend
     ->setMethod("POST")
     ->addQuery("message", $message)
@@ -78,7 +78,7 @@ $message = "Edit Message";
 // objectId
 $objectId = "Edit Push Message ObjectId";
 
-$mobileBackend = new MobileBackend($config);
+$mobileBackend = new \MobileBackend\PhpSdk\MobileBackend($config);
 $mobileBackend
     ->setMethod("PUT")
     ->addQuery("message", $message)
@@ -89,7 +89,7 @@ $mobileBackend
 ## DELETE
 
 ```php
-$mobileBackend = new MobileBackend($config);
+$mobileBackend = new \MobileBackend\PhpSdk\MobileBackend($config);
 $mobileBackend
     ->setMethod("DELETE")
     ->setEndPoint("push/" . $objectId)

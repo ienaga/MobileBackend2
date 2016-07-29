@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileBackend;
+namespace MobileBackend\PhpSdk;
 
 class MobileBackend
 {
@@ -138,12 +138,6 @@ class MobileBackend
      */
     public function setDomain($domain)
     {
-        if (strpos($domain, "http") === false) {
-            $domain = "https://" . $domain;
-        }
-        if (substr($domain, -1) !== "/") {
-            $domain .= "/";
-        }
         $this->domain = $domain;
         return $this;
     }
@@ -170,7 +164,7 @@ class MobileBackend
      */
     public function setEndPoint($api_path)
     {
-        if (substr($api_path, 0 ,1) !== "/") {
+        if (substr($api_path, 0, 1) !== "/") {
             $api_path = "/". $api_path;
         }
         $this->end_point = $api_path;
@@ -200,9 +194,9 @@ class MobileBackend
      */
     public function getUrl()
     {
-        $url = $this->getDomain()
-            . $this->getVersion()
-            . $this->getEndPoint();
+        $url = "https://". $this->getDomain() ."/". $this->getVersion() . $this->getEndPoint();
+
+
 
         if ($this->isQuery() && $this->getMethod() === "GET")
             $url .= "?". $this->getQuery();
@@ -360,7 +354,7 @@ class MobileBackend
         $signature_string  = '';
         $signature_string .= $this->getMethod() . "\n";
         $signature_string .= $this->getDomain() . "\n";
-        $signature_string .= $this->getEndPoint() . "\n";
+        $signature_string .= "/". $this->getVersion() . $this->getEndPoint() . "\n";
         $signature_string .= sprintf(
             self::SIGNATURE_STRING,
             $this->getApplicationKey(),
